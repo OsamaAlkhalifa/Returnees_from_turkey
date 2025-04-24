@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Inflow and Outflow from IRN and PAK per Month </title>
+  <title>Returnees from Turkiye by Month </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Load Chart.js from CDN -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -43,8 +43,8 @@
         // Loop through each row of the CSV
         results.data.forEach(function(row) {
           // Check if required fields exist before adding them to the arrays
-          if(row.Date && row.returnees !== undefined) {
-            dates.push(row.Date);
+          if(row.dates && row.returnees !== undefined) {
+            dates.push(row.dates);
             inflows.push(row.returnees);
           }
         });
